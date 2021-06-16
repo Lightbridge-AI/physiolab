@@ -14,11 +14,6 @@
 #' @param encoding vector: either the encoding of all files, or one encoding for each files
 #' @param source used to specify specific formats of some input file types, such as JSON or HTML. Currently supported types are "twitter" for JSON and "nexis" for HTML
 #' @param cache if TRUE, save remote file to a temporary folder. Only used when file is a URL.
-#' @param verbosity
-#'   * 0: output errors only
-#'   * 1: output errors and warnings (default)
-#'   * 2: output a brief summary message
-#'   * 3: output detailed file-related messages
 #' @param format_cols If `TRUE` format appropriate output variables as factor, integer, or double.
 #' @param ... passed to `readtext::readtext()`
 #'
@@ -36,7 +31,6 @@ read_HRV_report <- function(file,
                             encoding = "UTF-16LE",
                             source = NULL,
                             cache = TRUE,
-                            verbosity = readtext::readtext_options("verbosity"),
                             format_cols = TRUE,
                             ...
 ) {
@@ -52,7 +46,7 @@ read_HRV_report <- function(file,
                                    encoding = encoding,
                                    source = source,
                                    cache = cache,
-                                   verbosity = verbosity, ...) %>%
+                                   ...) %>%
     tibble::tibble() %>%
     dplyr::mutate(
       # Line 1

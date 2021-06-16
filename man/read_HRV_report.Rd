@@ -15,7 +15,6 @@ read_HRV_report(
   encoding = "UTF-16LE",
   source = NULL,
   cache = TRUE,
-  verbosity = readtext::readtext_options("verbosity"),
   format_cols = TRUE,
   ...
 )
@@ -39,15 +38,6 @@ This allows easy assignment of docvars from filenames such as 1789-Washington.tx
 \item{source}{used to specify specific formats of some input file types, such as JSON or HTML. Currently supported types are "twitter" for JSON and "nexis" for HTML}
 
 \item{cache}{if TRUE, save remote file to a temporary folder. Only used when file is a URL.}
-
-\item{verbosity}{\itemize{
-\item 0: output errors only
-\itemize{
-\item 1: output errors and warnings (default)
-\item 2: output a brief summary message
-\item 3: output detailed file-related messages
-}
-}}
 
 \item{format_cols}{If \code{TRUE} format appropriate output variables as factor, integer, or double.}
 
