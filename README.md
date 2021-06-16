@@ -6,7 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of physiolab is to …
+R 📦 for wrangling laboratory data in physiology.
 
 ## Installation
 
