@@ -39,7 +39,7 @@ This allows easy assignment of docvars from filenames such as 1789-Washington.tx
 
 \item{cache}{if TRUE, save remote file to a temporary folder. Only used when file is a URL.}
 
-\item{format_cols}{If \code{TRUE} format appropriate output variables as factor, integer, or double.}
+\item{format_cols}{If \code{TRUE} format appropriate output variables as factor, integer, or double. Compute \code{NN50_percent} (pNN50) from \code{NN50_count/Normals_count}}
 
 \item{...}{passed to \code{readtext::readtext()}}
 }

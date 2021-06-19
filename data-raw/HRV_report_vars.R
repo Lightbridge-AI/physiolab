@@ -38,6 +38,7 @@ HRV_report_vars <- c(
   Ectopics_count = "Ectopic beats count",
   Artifacts_count = "Artifacts count",
   NN50_count = "NN50 count",
+  NN50_percent = "pNN50 (%)",
   # Line 11
   Spec_intv = "Spectrum intervals",
   Spec_mean_NN = "Mean spectrum NN (ms)",
@@ -58,5 +59,6 @@ HRV_report_vars <- c(
 ) %>%
 
   tibble::enframe("variable", "description")
+
 
 usethis::use_data(HRV_report_vars, overwrite = TRUE)

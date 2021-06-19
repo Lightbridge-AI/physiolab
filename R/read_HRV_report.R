@@ -14,7 +14,7 @@
 #' @param encoding vector: either the encoding of all files, or one encoding for each files
 #' @param source used to specify specific formats of some input file types, such as JSON or HTML. Currently supported types are "twitter" for JSON and "nexis" for HTML
 #' @param cache if TRUE, save remote file to a temporary folder. Only used when file is a URL.
-#' @param format_cols If `TRUE` format appropriate output variables as factor, integer, or double.
+#' @param format_cols If `TRUE` format appropriate output variables as factor, integer, or double. Compute `NN50_percent` (pNN50) from `NN50_count/Normals_count`
 #' @param ... passed to `readtext::readtext()`
 #'
 #' @return A data.frame
@@ -119,6 +119,8 @@ read_HRV_report <- function(file,
                   dplyr::across(Age, as.integer),
                   dplyr::across(c(Beats_tot,Rec_length, Discontinuities:Power_tot,
                                   VLF,LF, LF_nu, HF, HF_nu, LF_HF), as.numeric)
-    )
+    ) %>%
+    # Add pNN50
+    dplyr::mutate(NN50_percent = 100 * (NN50_count/Normals_count), .after = NN50_count)
 
 }
