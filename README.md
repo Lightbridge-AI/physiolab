@@ -4,15 +4,18 @@
 # physiolab
 
 <!-- badges: start -->
+
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
 R 📦 for wrangling laboratory data in physiology.
 
 ## Installation
 
-You can install the released version of physiolab from
+You can install the developmental version of physiolab from
 [GitHub](https://github.com) with:
 
 ``` r
-devtools::install_github("Lightbridge-AI/physiolab")
+devtools::install_github("Lightbridge-KS/physiolab")
 ```
