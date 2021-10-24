@@ -16,6 +16,7 @@ Imports:
     magrittr,
     purrr,
     readtext,
+    stats,
     stringr,
     tibble,
     utils
