@@ -26,3 +26,5 @@ Config/testthat/edition: 3
 Depends: 
     R (>= 2.10)
 LazyData: true
+URL: https://github.com/Lightbridge-KS/physiolab
+BugReports: https://github.com/Lightbridge-KS/physiolab/issues
